@@ -2,62 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>NCWRH</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sway Presentation</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+        .sway-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .sway-iframe {
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            border: none;
+            object-fit: contain;
+        }
+        @media screen and (max-width: 768px) {
+            .sway-iframe {
+                transform: scale(1.5); /* Optional: Zoom slightly for mobile */
+            }
+        }
+    </style>
 </head>
 <body>
-    <nav>
-	<div class="logo">NCWRH</div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#workinggroups">Working Groups</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <div class="static-section">
-        <h1>Nordic Collaboration for Women's<br>and Reproductive Health</h1>
-        <p class="subtitle">Together we are working towards<br>accelerating research in women's and reproductive health.</p>
+    <div class="sway-container">
+        <iframe 
+            class="sway-iframe"
+            src="https://sway.cloud.microsoft/s/UNkilhuUNJORt7O6/embed" 
+            frameborder="0" 
+            marginheight="0" 
+            marginwidth="0" 
+            sandbox="allow-forms allow-modals allow-orientation-lock allow-popups allow-same-origin allow-scripts" 
+            scrolling="no" 
+            allowfullscreen 
+            mozallowfullscreen 
+            msallowfullscreen 
+            webkitallowfullscreen>
+        </iframe>
     </div>
-    
-    <div class="section" id="about">
-        <h2>About Us</h2>	
-        <p>In the NCWRH, we aggregate around our shared goal of addressing gaps<br>in knowledge and research within the <b>Women's and Reproductive Health</b> field. <br>You can learn more about our projects below and discover how to access our results.</p>
-    </div>
-
-    <div class="section" id="publications">
-        <h2>Publications</h2>
-        <div class="project">
-            <h3>Project Title</h3>
-            <p>Description of the project...</p>
-        </div>
-        <!-- Add more projects as needed -->
-    </div>
-
-    <div class="section" id="workinggroups">
-        <h2>Working groups</h2>
-        <ul class="member-list">
-            <li>Genetics</li>
-            <li>Phenomics</li>
-            <li>Mechanisms</li>
-            <li>Sexual dimorphism</li>
-            <li>Medicine</li>
-        </ul>
-    </div>
-
-    <div class="section" id="contact">
-        <h2>Contact Us</h2>
-        <p>We have several active projects, so please feel free to reach out<br> in case you want to collaborate with us.</p>
-    </div>
-
-    <footer>
-        <p>&copy; 2023 NCWRH. All rights reserved.</p>
-    </footer>
-
-    <script src="scroll.js"></script>
 </body>
 </html>
-
