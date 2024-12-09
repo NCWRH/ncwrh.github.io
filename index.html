@@ -5,25 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sway Presentation</title>
     <style>
-        body, html {
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+        body, html {
             height: 100%;
-            overflow: hidden;
+            width: 100%;
         }
         .sway-container {
-            width: 100%;
-            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
         }
         .sway-iframe {
-            width: 90%; /* Reduced width */
-            max-width: 1000px; /* Maximum width */
-            height: 80vh; /* Reduced height */
+            width: 100%;
+            max-width: 1200px;
+            aspect-ratio: 16 / 9;
             border: none;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Responsive adjustments */
+        @media screen and (max-width: 768px) {
+            .sway-container {
+                padding: 10px;
+            }
+            .sway-iframe {
+                aspect-ratio: 4 / 3;
+            }
+        }
+
+        @media screen and (min-width: 1920px) {
+            .sway-iframe {
+                max-width: 1600px;
+            }
         }
     </style>
 </head>
